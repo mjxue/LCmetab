@@ -2,8 +2,9 @@
 
 Maojie Xue, Yuening Ding, Jiacheng Zhou, et al.
 
-> **Data Availability and Demo Dataset Notice**  
-> Due to strict patient privacy and data use agreements, the raw data from the Boston Lung Cancer Study (BLCS) and the UK Biobank (UKB) **cannot be publicly shared**. Therefore, a small demo dataset is **not provided** in this repository. The provided R scripts are fully functional and are designed to accept standard data formats (e.g., `.RData` or `.csv`) containing survival outcomes, clinical covariates, and metabolic features. 
+> **Data Availability Notice**  
+> Due to strict patient privacy and data use agreements, the raw data from the Boston Lung Cancer Study (BLCS) and the UK Biobank (UKB) cannot be publicly shared. However, to fulfill the code availability and reproducibility requirements, a **de-identified subset dataset (`demo_BLCS_data.RData`)** is provided in this repository for testing the core scripts. The provided R scripts are fully functional and are designed to accept standard data formats (e.g., `.RData` or `.csv`) containing survival outcomes, clinical covariates, and metabolic features.
+
 This repository contains the R source code used for the statistical analyses, biomarker screening, sensitivity analyses, multi-omics integration, and figure generation in the manuscript.
 
 ## 1. System requirements
@@ -33,6 +34,7 @@ This repository contains the R source code used for the statistical analyses, bi
   - `survIDINRI` (1.1.2)
   - `readxl` (1.4.3)
   - `plyr` (1.8.9)
+  - `survminer` (0.5.0)
 
 ### Hardware requirements
 - No non-standard hardware is required. The software can be run on a standard desktop computer.
@@ -45,7 +47,9 @@ This repository contains the R source code used for the statistical analyses, bi
    install.packages(c("tidyverse", "data.table", "gtsummary", "foreach", "doParallel", 
                       "ggplot2", "ggalluvial", "ggpattern", "patchwork", "circlize", 
                       "ggrepel", "ggbeeswarm", "scales", "survival", "rms", "bnlearn", 
-                      "CMAverse", "timeROC", "metamisc", "survIDINRI", "readxl", "plyr"))
+                      "CMAverse", "timeROC", "metamisc", "survIDINRI", "readxl", "plyr",
+                      "survminer"))
+   ```
 3.Typical install time: Installation should take approximately 10-20 minutes on a normal desktop computer, depending on your internet connection and compilation time.
 
 ## 3. Demo
@@ -82,7 +86,7 @@ Upon successful execution, the script will generate and save the following files
 - 12External_validation.R: Scripts for the Chinese lung cancer cohort analyses.
 - 14UKBPPP_clinical.R and 15multi_Fig5.R: Scripts for the UKB-PPP trans-omics analyses.
 
-- 02code/function/: Contains custom R functions (e.g., Biomarker_screening_function.R) essential for the analysis. Ensure paths are correctly sourced in the main scripts.
+- Function/: Contains custom R functions (e.g., Biomarker_screening_function.R, stdca.R) essential for the analysis. Ensure paths are correctly sourced in the main scripts.
 
 ## 5. How to run on your data
 1. Clone or download this repository to your local machine.
