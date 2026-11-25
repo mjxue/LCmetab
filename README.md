@@ -31,3 +31,13 @@ This repository contains the R source code used for the statistical analyses, bi
   - `survIDINRI` (1.1.2)
   - `readxl` (1.4.3)
   - `plyr` (1.8.9)
+ 
+## 2. Installation guide
+
+1. Ensure **R version 4.2.0** is installed on your system.
+2. Open the R console and install the required packages using the following command:
+   ```R
+   install.packages(c("tidyverse", "data.table", "gtsummary", "foreach", "doParallel", 
+                      "ggplot2", "ggalluvial", "ggpattern", "patchwork", "circlize", 
+                      "ggrepel", "ggbeeswarm", "scales", "survival", "rms", "bnlearn", 
+                      "CMAverse", "timeROC", "metamisc", "survIDINRI", "readxl", "plyr"))
