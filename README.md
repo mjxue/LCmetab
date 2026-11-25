@@ -55,7 +55,26 @@ As stated in the Data Availability notice, the raw data from the BLCS and UKB ca
 1. **Download required files:** Ensure the following files are in your working directory:
    - `demo_BLCS_data.RData` (contains `demo_BLCS_data.RData` objects).
    - `stdca.R` (the custom function required for Decision Curve Analysis, which is available in the `function/` folder of this repository).
-   - 
+2. **Modify the paths:** Open the script `13Fig4_plot.R`. 
+   - **CRITICAL:** Comment out or delete the `setwd('D:/Cancer Model/...')` command.
+   - **CRITICAL:** Modify the line `source('D:/Cancer Model/my_function/stdca.R')` to point to your local path where `stdca.R` is located (e.g., `source('02code/function/stdca.R')`).
+3. **Create output directories:** Ensure the folders `03result/01Figure/` and `03result/02Table/` exist in your working directory. If not, create them before running the script (e.g., `dir.create("03result/01Figure", recursive = TRUE)`).
+4. **Run the script:** Execute the entire `13Fig4_plot.R` script. It will automatically build the Cox models, perform 10-fold cross-validation, calculate the metrics, and generate the plots/tables.
+
+### Expected output:
+Upon successful execution, the script will generate and save the following files in your working directory:
+- **Figures (saved in `03result/01Figure/`):**
+  - `Fig4A_AUC.pdf`: Bar chart showing the time-dependent AUC of the two models from 1 to 10 years.
+  - `Fig4B_EO.pdf`: Plot showing the Expected/Observed (E/O) ratio for model calibration.
+  - `Fig4C_DCA.pdf`: Four-panel Decision Curve Analysis (DCA) plots for 3-year and 5-year survival.
+- **Tables (saved in `03result/02Table/`):**
+  - `TabS13_AUC_compare_optbia.csv`: Table comparing AUCs with optimism-corrected values.
+  - `EO_compare.csv`: Table of E/O ratios at different time points.
+  - `TabS14_IDI_NRI_1to10yr.csv`: Table containing the calculated NRI and IDI metrics for 1 to 10 years.
+- **Console output:** The R console will print progress messages (e.g., "Processing time = X years") during the IDI/NRI calculation loop, and print the final `all_results` table.
+
+### Expected run time for demo:
+- On a "normal" desktop computer (e.g., 4-core CPU, 16GB RAM), running `13Fig4_plot.R` with the demo dataset will take approximately **5-15 minutes**. The majority of this time is consumed by the 1000-iteration bootstrap in the `IDI.INF` function and the 10-fold cross-validation.
 
 ## 4. Instructions for use
 ### File Structure
