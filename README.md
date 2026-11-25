@@ -2,6 +2,8 @@
 
 Maojie Xue, Yuening Ding, Jiacheng Zhou, et al.
 
+> **Data Availability and Demo Dataset Notice**  
+> Due to strict patient privacy and data use agreements, the raw data from the Boston Lung Cancer Study (BLCS) and the UK Biobank (UKB) **cannot be publicly shared**. Therefore, a small demo dataset is **not provided** in this repository. The provided R scripts are fully functional and are designed to accept standard data formats (e.g., `.RData` or `.csv`) containing survival outcomes, clinical covariates, and metabolic features. 
 This repository contains the R source code used for the statistical analyses, biomarker screening, sensitivity analyses, multi-omics integration, and figure generation in the manuscript.
 
 ## 1. System requirements
