@@ -50,6 +50,7 @@ This repository contains the R source code used for the statistical analyses, bi
                       "CMAverse", "timeROC", "metamisc", "survIDINRI", "readxl", "plyr",
                       "survminer"))
    ```
+   
 3.Typical install time: Installation should take approximately 10-20 minutes on a normal desktop computer, depending on your internet connection and compilation time.
 
 ## 3. Demo
@@ -57,11 +58,11 @@ As stated in the Data Availability notice, the raw data from the BLCS and UKB ca
 
 ### Instructions to run on data:
 1. **Download required files:** Ensure the following files are in your working directory:
-   - `demo_BLCS_data.RData` (contains `demo_BLCS_data.RData` objects).
+   - `demo_BLCS_data.RData` (contains the demo_BLCS_data data frame).
    - `stdca.R` (the custom function required for Decision Curve Analysis, which is available in the `function/` folder of this repository).
 2. **Modify the paths:** Open the script `13Fig4_plot.R`. 
    - **CRITICAL:** Comment out or delete the `setwd('D:/Cancer Model/...')` command.
-   - **CRITICAL:** Modify the line `source('D:/Cancer Model/my_function/stdca.R')` to point to your local path where `stdca.R` is located (e.g., `source('02code/function/stdca.R')`).
+   - **CRITICAL:** Modify the line `source('D:/Cancer Model/my_function/stdca.R')` to point to your local path where `stdca.R` is located (e.g., `source('Function/stdca.R')`).
 3. **Create output directories:** Ensure the folders `03result/01Figure/` and `03result/02Table/` exist in your working directory. If not, create them before running the script (e.g., `dir.create("03result/01Figure", recursive = TRUE)`).
 4. **Run the script:** Execute the entire `13Fig4_plot.R` script. It will automatically build the Cox models, perform 10-fold cross-validation, calculate the metrics, and generate the plots/tables.
 
