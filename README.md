@@ -49,7 +49,13 @@ This repository contains the R source code used for the statistical analyses, bi
 3.Typical install time: Installation should take approximately 10-20 minutes on a normal desktop computer, depending on your internet connection and compilation time.
 
 ## 3. Demo
-As stated in the Data Availability and Demo Dataset Notice at the top, a demo dataset is not included due to data privacy restrictions.
+As stated in the Data Availability notice, the raw data from the BLCS and UKB cannot be publicly shared due to patient privacy restrictions. To fulfill the code availability requirement and allow reviewers to verify our pipeline, we have provided a **de-identified subset dataset with positive results (`demo_BLCS_data.RData`)**. This dataset specifically supports the execution of `13Fig4_plot.R`, which evaluates the predictive performance (AUC, E/O ratio, DCA, and NRI/IDI) of the metabolite-augmented model versus the baseline clinical model.
+
+### Instructions to run on data:
+1. **Download required files:** Ensure the following files are in your working directory:
+   - `demo_BLCS_data.RData` (contains `demo_BLCS_data.RData` objects).
+   - `stdca.R` (the custom function required for Decision Curve Analysis, which is available in the `function/` folder of this repository).
+   - 
 
 ## 4. Instructions for use
 ### File Structure
