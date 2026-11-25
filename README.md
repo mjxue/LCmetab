@@ -43,3 +43,22 @@ This repository contains the R source code used for the statistical analyses, bi
                       "ggplot2", "ggalluvial", "ggpattern", "patchwork", "circlize", 
                       "ggrepel", "ggbeeswarm", "scales", "survival", "rms", "bnlearn", 
                       "CMAverse", "timeROC", "metamisc", "survIDINRI", "readxl", "plyr"))
+3.Typical install time: Installation should take approximately 10-20 minutes on a normal desktop computer, depending on your internet connection and compilation time.
+
+## 3. Demo
+As stated in the Data Availability and Demo Dataset Notice at the top, a demo dataset is not included due to data privacy restrictions.
+
+## 4. Instructions for use
+### File Structure
+- 01Creat_Tab1.R to 11Sub_analysis_plot.R, and 13Fig4_plot.R: Scripts for the BLCS metabolomic analysis and visualization.
+- 12External_validation.R: Scripts for the Chinese lung cancer cohort analyses.
+- 14UKBPPP_clinical.R and 15multi_Fig5.R: Scripts for the UKB-PPP trans-omics analyses.
+
+- 02code/function/: Contains custom R functions (e.g., Biomarker_screening_function.R) essential for the analysis. Ensure paths are correctly sourced in the main scripts.
+
+## 5. How to run on your data
+1. Clone or download this repository to your local machine.
+
+2. Modify the file paths in the scripts (specifically the setwd() and load() commands) to point to your local directories and datasets.
+
+3. Adjust the n_cores parameter in scripts utilizing doParallel (e.g., 02BIF_permutation.R and 03Biomarker_screen.R) to match your computer's available CPU cores.
