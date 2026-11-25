@@ -33,7 +33,10 @@ This repository contains the R source code used for the statistical analyses, bi
   - `survIDINRI` (1.1.2)
   - `readxl` (1.4.3)
   - `plyr` (1.8.9)
- 
+
+### Hardware requirements
+- No non-standard hardware is required. The software can be run on a standard desktop computer.
+
 ## 2. Installation guide
 
 1. Ensure **R version 4.2.0** is installed on your system.
